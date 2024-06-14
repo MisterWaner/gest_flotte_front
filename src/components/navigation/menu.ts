@@ -1,7 +1,7 @@
-const menuLinks: { name: string; href: string }[] = [
-    { name: "Home", href: "/" },
-    { name: "Solution", href: "/#solution" },
-    { name: "Pricing", href: "/#pricing" },
+const menuLinks: { id: number; name: string; href: string }[] = [
+    { id: 1, name: "Home", href: "/" },
+    { id: 2, name: "Solution", href: "/#solution" },
+    { id: 3, name: "Pricing", href: "/#pricing" },
 ]
 
 export default menuLinks

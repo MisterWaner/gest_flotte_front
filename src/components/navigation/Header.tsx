@@ -1,4 +1,4 @@
-import DesktopNav from "./DesktopNav";
+import NavChoose from "./NavChoose";
 
 export default function Header() {
     return (
@@ -6,7 +6,7 @@ export default function Header() {
             <div>
                 logo
             </div>
-            <DesktopNav />
+            <NavChoose />
         </header>
     );
 }
