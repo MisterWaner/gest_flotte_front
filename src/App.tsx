@@ -1,11 +1,7 @@
-function App() {
-  
+import Home from "@/pages/Home";
 
-  return (
-    <div className="text-3xl font-bold underline">
-      Hello World
-    </div>
-  )
+function App() {
+    return <Home />;
 }
 
-export default App
+export default App;
