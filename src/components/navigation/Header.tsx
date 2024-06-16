@@ -1,9 +1,9 @@
 import { useMediaQuery } from "usehooks-ts";
+import { ReactNode} from "react";
 import { X, Menu } from "lucide-react";
 
 import menuLinks from "./menu";
-import DesktopNavButton from "./DesktopNavButton";
-import MobilNavButton from "./MobilNavButton";
+import { Button } from "@/components/ui/button";
 import {
     Sheet,
     SheetClose,
@@ -11,18 +11,18 @@ import {
     SheetHeader,
     SheetTrigger,
 } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
-import { ReactNode } from "react";
 
+// Header component
 export default function Header() {
     return (
-        <header className="flex justify-between p-4">
+        <header className="w-full bg-white flex justify-between p-4">
             <div>logo</div>
             <NavChoose />
         </header>
     );
 }
 
+// MenuList
 const MenuList = ({
     children,
     className,
@@ -36,8 +36,10 @@ const MenuList = ({
             onClick={(event: React.SyntheticEvent) => {
                 event.preventDefault();
                 const target = event.target as HTMLAnchorElement;
-                const id = target.getAttribute("href")?.replace("#", "");
-                const element = document.getElementById(String(id));
+                console.log(target);
+                const idHref = target.getAttribute("href")?.replace("#", "");
+                const element = document.getElementById(String(idHref));
+                console.log(element);
                 element?.scrollIntoView({
                     behavior: "smooth",
                 });
@@ -48,6 +50,7 @@ const MenuList = ({
     );
 };
 
+// DesktopNav
 const DesktopNav = () => {
     const links = menuLinks;
 
@@ -55,13 +58,18 @@ const DesktopNav = () => {
         <nav className="w-1/2">
             <MenuList className="flex justify-between">
                 {links.map((link) => (
-                    <DesktopNavButton key={link.id} {...link} />
+                    <li key={link.id}>
+                        <Button variant={"ghost"} className="font-bold">
+                            <a href={link.href}>{link.name.toUpperCase()}</a>
+                        </Button>
+                    </li>
                 ))}
             </MenuList>
         </nav>
     );
 };
 
+// MobileNav
 const MobileNav = () => {
     const links = menuLinks;
 
@@ -73,9 +81,10 @@ const MobileNav = () => {
                         <Menu />
                     </Button>
                 </SheetTrigger>
-                <SheetContent side={"top"}>
+                <SheetContent side="top">
                     <SheetHeader className="flex flex-row justify-between items-center space-y-0">
                         <span></span>
+
                         <SheetClose asChild>
                             <Button variant="ghost">
                                 <X />
@@ -84,7 +93,16 @@ const MobileNav = () => {
                     </SheetHeader>
                     <MenuList className="w-full flex flex-col items-center gap-3">
                         {links.map((link) => (
-                            <MobilNavButton key={link.id} {...link} />
+                            <li key={link.id}>
+                                <SheetClose>
+                                    <Button
+                                        variant={"ghost"}
+                                        className="font-bold"
+                                    >
+                                        <a href={link.href}>{link.name}</a>
+                                    </Button>
+                                </SheetClose>
+                            </li>
                         ))}
                     </MenuList>
                 </SheetContent>
@@ -93,6 +111,7 @@ const MobileNav = () => {
     );
 };
 
+// NavChoose
 const NavChoose = () => {
     const isDesktop = useMediaQuery("(min-width: 768px)");
 
