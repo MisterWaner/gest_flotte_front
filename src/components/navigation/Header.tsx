@@ -15,8 +15,8 @@ import {
 // Header component
 export default function Header() {
     return (
-        <header className="w-full fixed top-0 left-0 z-50 bg-white flex justify-between p-4">
-            <div>logo</div>
+        <header className="w-full h-16 fixed top-0 left-0 z-50 bg-white flex items-center justify-between p-4">
+            <div className="font-bold text-3xl border-2 border-black rounded-full p-2 bg-chilean-fire-500">GF</div>
             <NavChoose />
         </header>
     );
@@ -74,7 +74,7 @@ const MobileNav = () => {
     const links = menuLinks;
 
     return (
-        <nav className="md:hidden">
+        <nav className="lg:hidden">
             <Sheet>
                 <SheetTrigger asChild>
                     <Button variant="ghost">
@@ -113,7 +113,7 @@ const MobileNav = () => {
 
 // NavChoose
 const NavChoose = () => {
-    const isDesktop = useMediaQuery("(min-width: 768px)");
+    const isDesktop = useMediaQuery("(min-width: 1024px)");
 
     if (isDesktop) {
         return <DesktopNav />;

@@ -1,79 +1,25 @@
 import Header from "@/components/navigation/Header";
 import Wrapper from "@/components/Wrapper";
+import Smartphone from "@/assets/images/smartphone2.png";
 
 export default function Home() {
     return (
         <div>
             <Header />
             <Wrapper>
-                <section id="home" className="">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Odio in consequatur assumenda autem quaerat minima unde vero
-                    voluptatum atque iste nam modi hic illum, deleniti ab nobis
-                    ad distinctio debitis neque consectetur quibusdam ea ratione
-                    cupiditate? Praesentium, perferendis quia vitae odit illum
-                    voluptatem at fuga, ducimus doloribus nulla fugiat pariatur!
-                    Animi unde, accusamus excepturi necessitatibus iste pariatur
-                    rerum, ad dignissimos at quaerat reprehenderit enim aperiam
-                    doloribus optio atque itaque consectetur minus rem debitis
-                    temporibus placeat soluta dolore distinctio. Soluta,
-                    architecto molestiae. Iure amet totam dignissimos aliquam
-                    similique quaerat alias doloremque possimus reiciendis,
-                    deleniti, officia tempora voluptatibus asperiores aliquid
-                    dolorum voluptates deserunt impedit rem molestias incidunt?
-                    Natus facilis sint in deserunt nemo commodi maxime autem
-                    sapiente voluptatum aliquid magni, laudantium enim beatae
-                    vel modi expedita mollitia dolore dignissimos, placeat at. A
-                    voluptatibus libero explicabo provident dolorum. Iusto fuga
-                    eaque perspiciatis optio et consequuntur. Natus provident
-                    cupiditate harum, unde, iure quaerat tempora, nisi odit
-                    aperiam tempore dolor. Harum dolor molestiae temporibus
-                    alias! Voluptas dicta eligendi optio, non ipsam quos
-                    officiis error consectetur eaque dolores nostrum nemo
-                    molestiae id ipsa excepturi enim necessitatibus repellendus
-                    ut iusto nisi at dignissimos perspiciatis totam? Placeat,
-                    perferendis. Adipisci sapiente dicta reiciendis tenetur
-                    excepturi quas, tempore cumque molestiae veritatis natus
-                    nihil sed voluptatum quam commodi deserunt suscipit, quia
-                    tempora magnam ipsum ab iure ad soluta omnis odio! Sint
-                    nesciunt amet, ratione voluptatem explicabo cum repellendus
-                    dolorem in sunt deserunt, praesentium inventore laudantium
-                    commodi voluptas provident facilis doloremque possimus eos
-                    sed dicta eius. Reiciendis neque quae consectetur
-                    exercitationem doloremque, sequi deleniti ipsam quia
-                    necessitatibus fugiat consequuntur id enim tempore voluptas.
-                    Dicta possimus omnis, culpa voluptatibus enim perspiciatis
-                    delectus officiis esse similique laboriosam laborum
-                    praesentium mollitia at! Perferendis, odit iste dolor
-                    voluptates illo fugit facilis necessitatibus, alias
-                    consequatur iusto quaerat animi quam quas nostrum laudantium
-                    officia amet quibusdam. Nostrum porro accusantium quasi
-                    aliquam non dolor velit totam, obcaecati facilis sapiente
-                    quidem fugit, deserunt ut quam corporis. Vero quasi fuga
-                    pariatur dolorem laboriosam magnam reiciendis atque qui
-                    velit neque culpa iure repellendus alias eveniet deleniti
-                    voluptates fugit itaque recusandae necessitatibus sed,
-                    consequuntur quaerat! Repellendus libero voluptas dicta nam,
-                    quis, ex fuga ab eius minus, voluptatibus unde rerum id
-                    facilis voluptates recusandae illo aliquid ullam cumque
-                    natus dolor quisquam laborum suscipit accusantium porro?
-                    Quasi nesciunt eligendi ipsam, at maxime inventore vel eum
-                    dolore porro voluptatum officia deleniti id soluta, iste
-                    corrupti! Possimus quidem accusantium, nam non recusandae
-                    esse repudiandae! Excepturi animi soluta repudiandae facilis
-                    quam similique accusantium laborum laudantium, explicabo
-                    pariatur voluptatum error ex doloribus cupiditate officiis
-                    perferendis ut porro impedit aliquam enim laboriosam!
-                    Voluptatem ratione unde fugit nihil deleniti quasi saepe
-                    pariatur temporibus, corporis quos, vero dolor officiis.
-                    Eaque adipisci voluptate asperiores explicabo, culpa,
-                    suscipit cum ex, laborum officia ipsum nam. Sunt autem odio
-                    alias culpa reiciendis id pariatur nulla earum dolores
-                    cumque laboriosam aut quam debitis rem sed eius aperiam in,
-                    maiores necessitatibus sit quod sequi quaerat nostrum?
-                    Fugiat recusandae repellat quaerat omnis, voluptatibus
-                    animi, doloribus aliquam iure eos, possimus eaque quod autem
-                    itaque? Quos quia atque obcaecati eius vero.
+                <section id="home" className="bg-chilean-fire-500">
+                    <div className="max-w-7xl mx-auto py-10 px-4 flex max-lg:flex-col justify-center items-center lg:justify-around">
+                        <div>
+                            <img src={Smartphone} alt="" />
+                        </div>
+                        <div className="text-center">
+                            <h1 className="text-5xl font-bold">Gest-Flotte</h1>
+                            <p className="text-2xl mt-4 font-semibold">
+                                <span className="font-bold text-white text-3xl">LA</span> solution pour une gestion optimisée de votre
+                                flotte de matériel.
+                            </p>
+                        </div>
+                    </div>
                 </section>
                 <section className="my-10" id="solution">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -220,8 +166,6 @@ export default function Home() {
                     quas.
                 </section>
             </Wrapper>
-                
-           
         </div>
     );
 }
