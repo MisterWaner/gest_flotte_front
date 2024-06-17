@@ -15,7 +15,7 @@ import {
 // Header component
 export default function Header() {
     return (
-        <header className="w-full bg-white flex justify-between p-4">
+        <header className="w-full fixed top-0 left-0 z-50 bg-white flex justify-between p-4">
             <div>logo</div>
             <NavChoose />
         </header>
@@ -81,7 +81,7 @@ const MobileNav = () => {
                         <Menu />
                     </Button>
                 </SheetTrigger>
-                <SheetContent side="top">
+                <SheetContent side="right">
                     <SheetHeader className="flex flex-row justify-between items-center space-y-0">
                         <span></span>
 
