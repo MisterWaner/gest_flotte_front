@@ -1,19 +1,21 @@
 import { Button } from "@/components/ui/button";
-
+import SolutionCarousel from "@/components/carousel/Carousel";
 import Header from "@/components/navigation/Header";
 import Wrapper from "@/components/Wrapper";
 import Smartphone from "@/assets/images/smartphone2.png";
-import Bus from "@/assets/images/bus.png";
-import Car from "@/assets/images/car.png";
-import Truck from "@/assets/images/truck.png";
 
 export default function Home() {
+    const utils: string[] = ["Smartphone", "Tablette", "Ordinateur", "Parc automobile", "Bus", "Camion", "..."];
+
     return (
         <div>
             <Header />
             <Wrapper>
-                <section id="home" className="bg-chilean-fire-500">
-                    <div className="max-w-7xl mx-auto py-10 px-4 flex max-lg:flex-col justify-center items-center lg:justify-around">
+                <section
+                    id="home"
+                    className="bg-chilean-fire-500 h-screen flex justify-center items-center"
+                >
+                    <div className="max-w-7xl h-full mx-auto py-10 px-4 flex max-lg:flex-col justify-center items-center lg:justify-around">
                         <div>
                             <img src={Smartphone} alt="" />
                         </div>
@@ -26,26 +28,40 @@ export default function Home() {
                                 solution pour une gestion optimisée de votre
                                 flotte de matériel.
                             </p>
-                            <Button className="mt-4">Tenter l'aventure</Button>
+                            <div className="mt-4 flex space-x-2 justify-center">
+                                <Button variant="secondary">
+                                    <a href="#solution">Késako ?</a>
+                                </Button>
+                                <Button className="">
+                                    Tenter l'aventure
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section className="bg-white" id="solution">
-                    <div className="max-w-7xl mx-auto py-10 px-4 flex max-lg:flex-col justify-center items-center lg:justify-around">
-                        <ul className="grid max-lg:grid-cols-1 lg:grid-cols-3">
-                            <li className="">
-                                <img src={Bus} alt="" />
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aperiam quae iure officiis suscipit ad sequi, doloribus repellat ab ratione?</p>
-                            </li>
-                            <li>
-                                <img src={Truck} alt="" />
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aperiam quae iure officiis suscipit ad sequi, doloribus repellat ab ratione?</p>
-                            </li>
-                            <li>
-                                <img src={Car} alt="" />
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aperiam quae iure officiis suscipit ad sequi, doloribus repellat ab ratione?</p>
-                            </li>
-                        </ul>
+                    <div className="max-w-7xl mx-auto py-10 px-4 flex flex-col justify-center items-center lg:justify-around">
+                        <SolutionCarousel />
+                        <div className="flex flex-col items-start justify-center py-10">
+                            <p className="text-3xl font-bold">
+                                Quel que soit votre besoin,{" "}
+                                <span className="bg-chilean-fire-500 px-2 rounded-md">
+                                    Gest-Flotte
+                                </span>{" "}
+                                vous offre la{" "}
+                                <span className="underline underline-offset-4 decoration-chilean-fire-500">
+                                    Solution
+                                </span>{" "}
+                                la plus performante.
+                            </p>
+                            <ul className="mt-4 text-2xl flex max-lg:flex-col">
+                                {utils.map((item, index) => (
+                                <li className="mr-4 font-semibold" key={index}>
+                                    {item}
+                                </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </section>
                 <section className="my-10" id="pricing">
