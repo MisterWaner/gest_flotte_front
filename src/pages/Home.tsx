@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
-import SolutionCarousel from "@/components/carousel/Carousel";
 import Header from "@/components/navigation/Header";
 import Wrapper from "@/components/Wrapper";
+import AnimatedList from "@/components/animated/animatedList";
+import PricingCard from "@/components/cards/PricingCard";
 import Smartphone from "@/assets/images/smartphone2.png";
+import Dashboard from "@/assets/images/dashboard.svg";
 
 export default function Home() {
-    const utils: string[] = ["Smartphone", "Tablette", "Ordinateur", "Parc automobile", "Bus", "Camion", "..."];
-
     return (
         <div>
             <Header />
@@ -32,17 +32,14 @@ export default function Home() {
                                 <Button variant="secondary">
                                     <a href="#solution">Késako ?</a>
                                 </Button>
-                                <Button className="">
-                                    Tenter l'aventure
-                                </Button>
+                                <Button className="">Tenter l'aventure</Button>
                             </div>
                         </div>
                     </div>
                 </section>
                 <section className="bg-white" id="solution">
                     <div className="max-w-7xl mx-auto py-10 px-4 flex flex-col justify-center items-center lg:justify-around">
-                        <SolutionCarousel />
-                        <div className="flex flex-col items-start justify-center py-10">
+                        <div className="flex flex-col items-start justify-center py-10 lg:items-center">
                             <p className="text-3xl font-bold">
                                 Quel que soit votre besoin,{" "}
                                 <span className="bg-chilean-fire-500 px-2 rounded-md">
@@ -54,87 +51,48 @@ export default function Home() {
                                 </span>{" "}
                                 la plus performante.
                             </p>
-                            <ul className="mt-4 text-2xl flex max-lg:flex-col">
-                                {utils.map((item, index) => (
-                                <li className="mr-4 font-semibold" key={index}>
-                                    {item}
-                                </li>
-                                ))}
-                            </ul>
+                            <AnimatedList />
+                        </div>{" "}
+                        <div className="self-start text-xl flex max-lg:flex-col justify-center items-center lg:justify-between">
+                            <div>
+                                <p>
+                                    Grâce à son dashboard, Gest-Flotte vous
+                                    permet de :
+                                </p>
+                                <ul className="mt-4 list-disc list-inside font-semibold">
+                                    <li>
+                                        Consulter les informations de votre
+                                        flotte.
+                                    </li>
+                                    <li>
+                                        Gérer et modifier l'état de votre
+                                        flotte.
+                                    </li>
+                                    <li>
+                                        Renouveler facilement les différents
+                                        contrats et abonnements liés à votre
+                                        flotte.
+                                    </li>
+                                </ul>
+                                <p className="mt-4">
+                                    Recevez des notifications à l'approche des
+                                    échéances, recevez des rappels de
+                                    maintenance et des alertes de facturation.
+                                </p>
+                            </div>
+                            <div className="max-lg:mt-10">
+                                <img src={Dashboard} alt="" />
+                            </div>
+                        </div>
+                        <div className="mt-4 w-full">
+                            <Button variant="default">Tenter l’aventure</Button>
                         </div>
                     </div>
                 </section>
-                <section className="my-10" id="pricing">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Doloremque temporibus laborum architecto maxime. Corporis
-                    voluptatem vel tenetur nihil sapiente! Fuga alias
-                    consequatur sed magni. Non doloribus nobis quos debitis
-                    ullam commodi ab dolorem tenetur, illo fugiat! Delectus,
-                    praesentium aliquam! Ullam eligendi tempora vel dolor
-                    doloremque odit officia pariatur cupiditate minima?
-                    Distinctio, adipisci. Sapiente itaque modi neque officia
-                    enim quo! Suscipit id exercitationem atque! Iste quaerat
-                    beatae repudiandae. Quod saepe suscipit repudiandae sapiente
-                    voluptate nostrum quos! Nulla quaerat nisi commodi
-                    doloremque consequuntur, sapiente vitae, dignissimos
-                    perspiciatis error corrupti quibusdam ratione exercitationem
-                    nesciunt iste eligendi molestiae a at distinctio! Tempore
-                    minima dolorem iusto voluptatibus recusandae ullam corrupti
-                    deserunt omnis dolorum, dolore quasi porro labore commodi,
-                    molestiae explicabo tenetur! Autem, laudantium? Vero numquam
-                    eum assumenda ipsam, labore reiciendis natus voluptate
-                    tenetur dignissimos fugiat ea delectus libero culpa dolore
-                    illum ratione corrupti at quisquam, id reprehenderit
-                    voluptatum saepe atque veritatis consequatur? Necessitatibus
-                    quaerat voluptate unde ipsa est molestiae dolore accusamus
-                    itaque aliquam sit, aperiam, aliquid ut reiciendis
-                    praesentium! Aspernatur, nihil. Nemo, inventore! Cum
-                    necessitatibus beatae sapiente saepe totam voluptatum ex,
-                    tenetur repellendus doloribus atque omnis quisquam
-                    reprehenderit accusantium nemo in vitae maxime modi
-                    perspiciatis debitis, maiores cumque culpa facere inventore.
-                    Voluptas tempora quidem rem sunt, placeat ipsa esse facere
-                    similique rerum vitae, distinctio architecto aliquid
-                    voluptatum dolore pariatur ratione nesciunt. Unde aliquam
-                    sit aut quibusdam officia fugiat ipsa omnis, et, enim quod
-                    voluptatibus laudantium consequatur reiciendis minima
-                    repellendus tempora aliquid aperiam. Dignissimos cum
-                    quisquam quidem, possimus temporibus obcaecati eligendi,
-                    esse recusandae et, pariatur amet ipsum reprehenderit saepe
-                    praesentium consequuntur ea inventore. Reprehenderit non eum
-                    aspernatur accusamus veniam repellat sequi magnam, vero sed,
-                    quas excepturi suscipit assumenda dolorum voluptates
-                    consequuntur quos unde. Nobis labore incidunt adipisci
-                    earum, officia similique temporibus dignissimos et!
-                    Obcaecati dignissimos corrupti, soluta impedit eos dicta,
-                    tempore molestias deserunt unde blanditiis veritatis
-                    exercitationem in architecto vero commodi officiis
-                    voluptatum expedita repellat perspiciatis. A quidem magnam
-                    perspiciatis, praesentium sit, nam hic vero suscipit dolores
-                    est cumque nisi inventore ratione laudantium, cum eaque.
-                    Itaque, voluptatibus placeat. Hic nulla omnis illum, quam
-                    facilis vero aspernatur atque eaque itaque quo autem, fuga
-                    cum inventore repudiandae reprehenderit dolorem assumenda
-                    doloribus fugit quis velit minus asperiores voluptatem?
-                    Mollitia sit ipsam commodi dolorum tenetur officia, dolorem
-                    doloremque sed harum minima libero, molestias corporis ad
-                    magnam quae odio cumque cum nisi adipisci sunt! Magni ipsum
-                    earum ipsam alias ea qui temporibus quos repudiandae numquam
-                    velit inventore reprehenderit aperiam quibusdam dolor,
-                    consequatur error sed officia consequuntur adipisci labore
-                    repellat unde, veritatis expedita quisquam. Odit enim et,
-                    voluptas repellat dignissimos quaerat minus aspernatur
-                    recusandae at sequi asperiores molestias non labore
-                    accusamus beatae cupiditate hic harum, libero deserunt quam
-                    vel laboriosam. Reprehenderit nam fuga voluptate rerum
-                    perspiciatis in nemo numquam saepe odit ipsa doloribus
-                    voluptatum cum modi impedit voluptates, vero incidunt nobis
-                    eveniet dolorem explicabo ipsum. Dolorum repudiandae, iure
-                    similique iusto temporibus omnis et odio itaque earum animi
-                    autem voluptatem quaerat cum accusantium dicta enim expedita
-                    ducimus, minus nulla ipsa labore cupiditate magni. Dolor
-                    reiciendis mollitia magni optio veritatis. Ex nihil ullam
-                    quas.
+                <section className="bg-chilean-fire-500" id="pricing">
+                    <div className="max-w-7xl mx-auto py-10 px-4 flex flex-col justify-center items-center lg:justify-around">
+                        <PricingCard />
+                    </div>
                 </section>
             </Wrapper>
         </div>
