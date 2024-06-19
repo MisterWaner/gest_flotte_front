@@ -90,8 +90,46 @@ export default function Home() {
                     </div>
                 </section>
                 <section className="bg-chilean-fire-500" id="pricing">
-                    <div className="max-w-7xl mx-auto py-10 px-4 flex flex-col justify-center items-center lg:justify-around">
-                        <PricingCard />
+                    <div className="max-w-7xl mx-auto py-10 px-4 flex max-lg:flex-col justify-center items-center lg:justify-around lg:items-stretch">
+                        <PricingCard
+                            title="Starter"
+                            description="Pour les TPE"
+                            price="75"
+                            features={[
+                                "2 flottes",
+                                "un utilisateur",
+                                "support 5/7jrs",
+                                "engagement 6 mois"
+                            ]}
+                            undisponibleFeatures={[
+                                "maintenance illimitée",
+                                "sans engagement",
+                            ]}
+                        />
+                        <PricingCard
+                            title="Medium"
+                            description="Pour les PME"
+                            price="150"
+                            features={[
+                                "5 flottes",
+                                "2 utilisateurs",
+                                "support 5/7jrs",
+                                "sans engagement",
+                            ]}
+                            undisponibleFeatures={["maintenance illimitée"]}
+                        />
+                        <PricingCard
+                            title="Premium"
+                            description="Pour les grandes entreprises"
+                            price="500"
+                            features={[
+                                "flexibilité",
+                                "5 utilisateurs",
+                                "maintenance illimitée",
+                                "support 6/7jrs",
+                                "sans engagement",
+                            ]}
+                        />
                     </div>
                 </section>
             </Wrapper>
