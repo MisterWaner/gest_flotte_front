@@ -91,7 +91,7 @@ const MobileNav = () => {
                             </Button>
                         </SheetClose>
                     </SheetHeader>
-                    <MenuList className="w-full flex flex-col items-center gap-3">
+                    <MenuList className="w-full h-full flex flex-col items-center justify-center gap-3">
                         {links.map((link) => (
                             <li key={link.id}>
                                 <SheetClose>

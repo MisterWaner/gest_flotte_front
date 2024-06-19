@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import Header from "@/components/navigation/Header";
 import Wrapper from "@/components/Wrapper";
+import ContactFormCard from "@/components/cards/ContactFormCard";
 import AnimatedList from "@/components/animated/animatedList";
 import PricingCard from "@/components/cards/PricingCard";
 import Smartphone from "@/assets/images/smartphone2.png";
 import Dashboard from "@/assets/images/dashboard.svg";
+import ContactCard from "@/components/cards/ContactCard";
 
 export default function Home() {
     return (
@@ -99,7 +101,7 @@ export default function Home() {
                                 "2 flottes",
                                 "un utilisateur",
                                 "support 5/7jrs",
-                                "engagement 6 mois"
+                                "engagement 6 mois",
                             ]}
                             undisponibleFeatures={[
                                 "maintenance illimitée",
@@ -130,6 +132,12 @@ export default function Home() {
                                 "sans engagement",
                             ]}
                         />
+                    </div>
+                </section>
+                <section id="contact" className="bg-white">
+                    <div className="max-w-7xl mx-auto py-10 px-4 flex max-lg:flex-col justify-center items-center lg:justify-around lg:items-stretch gap-4">
+                        <ContactFormCard />
+                        <ContactCard />
                     </div>
                 </section>
             </Wrapper>
