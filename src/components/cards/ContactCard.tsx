@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { MapPin, Phone } from "lucide-react";
 
 export default function ContactCard() {
     return (
@@ -6,16 +7,17 @@ export default function ContactCard() {
             <CardHeader>
                 <CardTitle>Contact</CardTitle>
             </CardHeader>
-            <CardContent>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+            <CardContent className="flex flex-col gap-2">
+                <p className="text-sm flex items-center gap-2">
+                    <MapPin className="" />{" "}
+                    <address className="grid grid-rows-2">
+                        <span>123 rue de la Paix</span>
+                        <span>75001 Paris</span>
+                    </address>
+                </p>
+                <p className="text-sm flex items-center gap-2">
+                    <Phone className="" />{" "}
+                    <a href="tel:+331234568789">+33 (0)1 23 45 67 89</a>
                 </p>
             </CardContent>
         </Card>
